@@ -11,17 +11,17 @@ jobs:
       uses: actions/checkout@master
     
     - name: Login
-      uses: okteto/actions/login@2ba1a5a20b8a29f60501584429db4c4c5a40e682
+      uses: okteto/actions/login@7eeadbbc90e3981806ef20bb9b30bb256544c8db
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
 
     - name: Activate namespace
-      uses: okteto/actions/namespace@2ba1a5a20b8a29f60501584429db4c4c5a40e682
+      uses: okteto/actions/namespace@7eeadbbc90e3981806ef20bb9b30bb256544c8db
       with:
         namespace: movies-preview-rberrelleza
     
     - name: Destroy Application
-      uses: okteto/actions/destroy-application@2ba1a5a20b8a29f60501584429db4c4c5a40e682
+      uses: okteto/actions/destroy-application@7eeadbbc90e3981806ef20bb9b30bb256544c8db
       with:
         name: pr-${{ github.event.number }}
         
