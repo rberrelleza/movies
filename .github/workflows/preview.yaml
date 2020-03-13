@@ -11,17 +11,17 @@ jobs:
       uses: actions/checkout@master
     
     - name: Login
-      uses: okteto/actions/login@d3b25b13412f4e7d99ff77bf55f1f5381e641e6e
+      uses: okteto/actions/login@575c7be4a5b3ba8a208cfdc2e3849f1ef3cb926d
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
 
     - name: Activate namespace
-      uses: okteto/actions/namespace@d3b25b13412f4e7d99ff77bf55f1f5381e641e6e
+      uses: okteto/actions/namespace@575c7be4a5b3ba8a208cfdc2e3849f1ef3cb926d
       with:
         namespace: movies-preview-rberrelleza
     
     - name: Deploy Application
-      uses: okteto/actions/deploy-application@d3b25b13412f4e7d99ff77bf55f1f5381e641e6e
+      uses: okteto/actions/deploy-application@575c7be4a5b3ba8a208cfdc2e3849f1ef3cb926d
       with:
         namespace: movies-preview-rberrelleza
         application: movies
@@ -35,12 +35,12 @@ jobs:
         time: '30s'
 
     - name: Push API Changes
-      uses: okteto/actions/push@d3b25b13412f4e7d99ff77bf55f1f5381e641e6e
+      uses: okteto/actions/push@575c7be4a5b3ba8a208cfdc2e3849f1ef3cb926d
       with:
         working-directory: api
 
     - name: Push Frontend Changes
-      uses: okteto/actions/push@d3b25b13412f4e7d99ff77bf55f1f5381e641e6e
+      uses: okteto/actions/push@575c7be4a5b3ba8a208cfdc2e3849f1ef3cb926d
       with:
         working-directory: frontend
     
