@@ -28,12 +28,12 @@ jobs:
         configuration: preview-config.yaml
 
     - name: Push API Changes
-      uses: okteto/actions/push@49ef4376aaf4635581bf8de870daef2a93353a91
+      uses: okteto/actions/push@ca4a4a5068b91bec0ef6f0d572ad67a69a818c7a
       with:
         working-directory: api
 
     - name: Push Frontend Changes
-      uses: okteto/actions/push@49ef4376aaf4635581bf8de870daef2a93353a91
+      uses: okteto/actions/push@ca4a4a5068b91bec0ef6f0d572ad67a69a818c7a
       with:
         working-directory: frontend
     
