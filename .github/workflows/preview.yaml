@@ -27,6 +27,7 @@ jobs:
         application: movies
         name: pr-${{ github.event.number }}
         configuration: preview-config.yaml
+        repository: https://apps.okteto.com
 
     - name: Push API Changes
       uses: okteto/actions/push@d3b25b13412f4e7d99ff77bf55f1f5381e641e6e
