@@ -1,7 +1,11 @@
 on: 
-  pull_request: 
-    types:
-      - opened
+  push:
+    branches-ignore:
+      - master 
+  pull_request:
+    branches:
+      - master
+    
 
 jobs:
   preview:
@@ -15,8 +19,8 @@ jobs:
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
 
-    - name: Create namespace
-      uses: okteto/actions/create-namespace@2ba1a5a20b8a29f60501584429db4c4c5a40e682
+    - name: Activate namespace
+      uses: okteto/actions/namespace@2ba1a5a20b8a29f60501584429db4c4c5a40e682
       with:
         namespace: movies-preview-rberrelleza
     
