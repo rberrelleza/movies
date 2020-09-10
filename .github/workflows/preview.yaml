@@ -31,4 +31,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        msg: "Preview environment available at https://movies-${{ github.event.number }}.sf.okteto.net"
+        msg: "Preview environment available at https://movies-movies-pr-${{ github.event.number }}.sf.okteto.net"
