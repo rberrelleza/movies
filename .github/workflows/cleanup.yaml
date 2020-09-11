@@ -29,4 +29,4 @@ jobs:
     - name: "Delete Namespace"
       uses: okteto/delete-namespace@master
       with:
-        name: movies-pr-${{ github.event.number }}
+        namespace: movies-pr-${{ github.event.number }}
